@@ -31,7 +31,8 @@ public class StreamAPI {
 		//4.	//reverse string using stream API
 		String sample = "Hello World";
 		
-		String revString = IntStream.range(0,sample.length()).mapToObj(i ->sample.charAt(sample.length()-1-i)).map(c ->String.valueOf(c)).collect(Collectors.joining());
+		String revString = IntStream.range(0, sample.length()).mapToObj(i -> sample.charAt(sample.length() - 1 - i))
+				.map(c -> String.valueOf(c)).collect(Collectors.joining());
 		
 		System.out.println(revString);
 		
@@ -115,6 +116,10 @@ public class StreamAPI {
 		//13.	// Question - Given a sentence, find the words with specified number of vowels
 		//14.	//divide the number array in even and odd
 		//15.	//Question - Given a string / word, find the occurrence of each character
+		
+		String charCount = "professionalism";
+		Map<String, Long> charCountResult = Arrays.stream(charCount.split("")).collect(Collectors.groupingBy(s->s,Collectors.counting()));
+		System.out.println(charCountResult);
 		//16.	// Question - Given a string / word, find the highest occurrence of character
 		//17.	// Question - Sort the integer array in ascending and descending
 		//18.	// Given an array, find the sum of unique numbers
