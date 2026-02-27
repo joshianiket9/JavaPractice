@@ -117,7 +117,7 @@ public class StreamAPI {
 		//14.	//divide the number array in even and odd
 		//15.	//Question - Given a string / word, find the occurrence of each character
 		
-		String charCount = "professionalism";
+		String charCount = "stringchangeindeveloperbranch";
 		Map<String, Long> charCountResult = Arrays.stream(charCount.split("")).collect(Collectors.groupingBy(s->s,Collectors.counting()));
 		System.out.println(charCountResult);
 		//16.	// Question - Given a string / word, find the highest occurrence of character
