@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -131,7 +132,13 @@ public class StreamAPI {
 		//24.	// Given a number array, find the numbers ends with 1.
 		//25.	// Given map of string and Long, sort the entries on the basis of values
 
+		// Reverse the given String
 		
+		System.out.println("Enter a string ");
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		
+		String revStr = IntStream.range(0, input.length()).mapToObj(i ->input.charAt(input.length()-1-i)).map(s ->String.valueOf(s)).collect(Collectors.joining());
+		System.out.println(revStr);
 	}
-
 }
